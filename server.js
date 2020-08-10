@@ -4,7 +4,6 @@ const express = require('express');
 const path = require('path');
 const hbs = require('hbs');
 const fs = require('fs');
-const cors = require('cors');
 const {mongoose} = require('./db/mongoose');
 const _ = require('lodash');
 const {checkUser, ifAuth, getUsername} = require('./middleware/authenticate');
@@ -27,8 +26,6 @@ app.use((req, res, next) => {
     res.header("Cache-Control", "no-cache, no-store, must-revalidate"); 
     next();
 });
-
-app.use(cors())
 
 app.use(express.json({limit:'500mb'})); 
 app.use(express.urlencoded({limit: "500mb", extended: true, parameterLimit:500000}));

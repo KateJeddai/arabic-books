@@ -73,14 +73,6 @@ const renderSignupPage = (req, res) => {
     res.render('signup.hbs');
 }
 
-/*
-router.get('/login', checkUser, renderLoginPage, (err) => {
-    console.log(req.user)
-    res.render('error.hbs', {
-        message: err.message
-    });
-})*/
-
 const renderLoginPage = (req, res) => {
     const origUrl = req.query.origUrl && req.query.origUrl.split(' ').join('+');
     console.log(req.user)

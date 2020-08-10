@@ -1,0 +1,54 @@
+<header>
+        <div class="brand-group">
+           <div class="brand pic"><a href="/"><img id="brand-logo" src="/images/logo.jpg" alt="arabic"></a></div>
+           <div class="brand txt"><a href="/"><h1>Arabic Language<br/> <span id="brand-span">Free Resources</span></h1></a></div>
+        </div>   
+        <nav class="nav">
+          <ul class="nav-ul navbar-collapse">
+            <li><a href="/">Home</a></li>
+            <li><a href="/books/tutorials">Tutorials</a></li>
+            <li><a href="/books/dialects">Dialects</a></li>
+            <li><a href="/books/dictionaries">Dictionaries</a></li>
+            <li><a href="/links">Useful Links</a></li>
+            <li>                 
+            {{#if loggedIn}}
+            <a href="/auth/signout"><i class="fas fa-sign-out-alt"></i></a>
+            {{else}}
+            <a href="/auth/login"><i class="fas fa-user-circle"></i></a>
+            {{/if}}
+            </li>
+          </ul>
+          <div class="md-navbar"><i class="fas fa-bars" id="nav-bars"></i></div>
+        </nav>
+        <div class="sidebar">
+          <div class="sidebar-wrapper">
+           <div class="md-navbar sidebar-md-navbar"><i class="fas fa-bars" id="nav-bars"></i></div>
+           <ul class="sidebar-nav">
+            <li>
+             {{#if loggedIn}}
+              <div class="sidebar-login">
+                <div><a href="/auth/signout"><i class="fas fa-sign-out-alt"></i></a></div>
+                <div><a href="/auth/signout"><p>Sign Out</p></a></div>
+              </div>  
+            {{else}}
+            <div class="sidebar-login">
+                <div><a href="/auth/login"><i class="fas fa-user-circle"></i></a></div>
+                <div>
+                  <a href="/auth/login">
+                    <p>Welcome!</p>
+                    <p>Sign In</p>
+                  </a>
+                </div>
+            </div>    
+            {{/if}}
+            </li>
+            <li class="sidebar-nav-item"><a href="/">Home</a></li>
+            <li><a href="/books/tutorials">Tutorials</a></li>
+            <li><a href="/books/dialects">Dialects</a></li>
+            <li><a href="/books/dictionaries">Dictionaries</a></li>
+            <li><a href="/links">Useful Links</a></li>
+          </ul>
+         </div>
+        </div>
+</header>
+<div id="decor"></div>

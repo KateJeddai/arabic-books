@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arabic Language</title>
+  <link  rel="stylesheet" href="/css/fontawesome-free-5.9.0-web/css/all.css" />  
+  <link rel="stylesheet" href="/css/arab.css"> 
+</head>
+<body>
+   <div class="body-wrapper"></div>
+  {{> header loggedIn=loggedIn}}  
+    <section id="main">
+        <div class="info-block">
+          {{#if username }}
+            <div id="greeting"><h2>Welcome, {{ username }}!</h2></div>
+          {{/if}}
+          {{> aside }}
+        </div>
+        <div class="container" id="links">
+         <h3 class="page-title">Useful Links:</h3>                  
+         <div class="links-group">
+          <div class="links-group-item">
+            <h4>Learning Resources:</h4>
+            <ul class="links">
+              <li class="link-item"><a href="https://www.arabicpod101.com" target="_blank">ArabicPod101: <span class="expl">learning podcast (with a free version)</span></a></li>
+              <li class="link-item"><a href="https://www.languagetransfer.org/free-courses-1#arabic" target="_blank">Language Transfer: <span class="expl">audio course</span></a></li>
+              <li class="link-item"><a href="https://www.lingq.com/en/learn-arabic-online/" target="_blank">LingQ: <span class="expl">free online lessons</span></a></li>
+              <li class="link-item"><a href="https://www.madinaharabic.com/learn-arabic.html" target="_blank">Madinah Arabic: <span class="expl">online course (with a free version)</span></a></li>
+            </ul>
+          </div>
+          <div class="links-group-item">
+            <h4>Reading Resources:</h4>
+            <ul class="links">
+              <li class="link-item"><a href="http://www.adabna.com/" target="_blank">Adabna: <span class="expl">Arabic poetry</span></a></li>
+              <li class="link-item"><a href="https://www.aldiwan.net/" target="_blank">Al Diwan: <span class="expl">Arabic poetry</span></a></li>                
+              <li class="link-item"><a href="http://al-hakawati.net/" target="_blank">Al Hakawati: <span class="expl">digital library</span></a></li>  
+              <li class="link-item"><a href="http://www.almeshkat.net/" target="_blank">Al Meshkat: <span class="expl">Islamic digital library</span></a></li> 
+              <li class="link-item"><a href="https://www.al-mostafa.com/" target="_blank">Al Mostafa: <span class="expl">not user friendly digital library</span></a></li> 
+              <li class="link-item"><a href="http://www.waqfeya.com/" target="_blank">Arabic Collections Online: <span class="expl">digital library</span></a></li>
+              <li class="link-item"><a href="http://dlib.nyu.edu/aco/" target="_blank">Al Waqfiya: <span class="expl">digital library</span></a></li>
+              <li class="link-item"><a href="http://www.childrenslibrary.org/icdl/AdvancedSearchCategory?selIds=309&viewIds=3&rnum=1&pgct=12&text=&lang=English&view=cover&sort=title&match=all&location=everywhere&ilang=English" target="_blank">International Children's Digital Library: <span class="expl">stories for children in Arabic</span></a></li> 
+              <li class="link-item"><a href="https://library.harvard.edu/collections/islamic-heritage-project" target="_blank">Islamic Heritage Project: <span class="expl">a digital collection of Islamic manuscripts, published texts, and maps from across Harvard's libraries and museums</span></a></li>         
+              <li class="link-item"><a href="https://www.nizariat.com/poertylist.php" target="_blank">Nizar Qabbani Poetry</a></li>
+              <li class="link-item"><a href="https://mybook4u.com/" target="_blank"><span dir="rtl"> إليك كتابى </span><span class="expl" dir="ltr">: digital library</span></a></li>               
+            </ul>
+          </div>
+          <div class="links-group-item">
+            <h4>Dictionaries:</h4>
+            <ul class="links">
+              <li class="link-item"><a href="https://www.almaany.com/">Almaany Dictionary</a></li>
+              <li class="link-item"><a href="https://forvo.com/languages/ar/">Forvo: <span class="expl">Pronunciation dictionary and some useful phrases</span></a></li>
+            </ul>
+            <h4>Media:</h4>
+            <ul class="links">
+              <li class="link-item"><a href="http://www.bbc.com/arabic" target="_blank">BBC Arabic</a></li>
+              <li class="link-item"><a href="https://www.dw.com/ar/%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A%D8%A9/s-9106" target="_blank">DW Arabic</a></li>
+              <li class="link-item"><a href="https://www.france24.com/ar/" target="_blank">France 24 Arabic</a></li>
+              <li class="link-item"><a href="https://www.aljazeera.net/" target="_blank">Al Jazeera Arabic</a></li>
+              <li class="link-item"><a href="https://www.mbc.net/" target="_blank">MBC</a></li>
+              <li class="link-item"><a href="https://www.alarabiya.net/" target="_blank">Al Arabiya Arabic</a></li>
+              <li class="link-item"><a href="https://www.trtarabi.com/" target="_blank">TRT Arabic</a></li>
+              <li class="link-item"><a href="https://www.al-monitor.com/pulse/home.html" target="_blank">Al-Monitor: <span class="expl">English and Arabic versions</span> </a></li>
+            </ul>
+          </div>  
+        </div>  
+       </div> 
+    </section>
+  {{> footer}}
+ <script src="/js/sidebar.js"></script>
+ <script src="/js/arab.js"></script>
+</body>
+</html>

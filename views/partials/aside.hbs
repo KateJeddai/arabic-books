@@ -1,0 +1,18 @@
+<aside>
+  <div class="date-group">
+    <div class="date-wrapper">
+      <div class="line left"></div>
+      <h5>{{ getTodayDate }}</h5>
+      <div class="line right"></div>
+    </div>  
+    <h5 class="arab-time">{{ getTodayDateAr }}</h5> 
+    <h5 class="arab-time">{{ getHijriDate }}</h5> 
+    {{ getTime }}
+  </div>
+  <h5><i class="far fa-grin"></i>Public Holidays in the Arab World:</h5>  
+    {{#each holidays}}
+      <h4><span>{{this.name}}</span> in {{this.country}}</h4>           
+      {{else}}
+          <p class="empty">There are no public holidays today</p>
+      {{/each}}
+</aside>

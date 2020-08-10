@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arabic Language</title>
+  <link  rel="stylesheet" href="/css/fontawesome-free-5.9.0-web/css/all.css" />   
+  <link rel="stylesheet" href="/css/arab.css">  
+   
+</head>
+<body>
+  <div class="body-wrapper"></div>
+  {{> header}}  
+    <section id="main">
+      {{#if message}}
+        <h3>{{message}}</h3>
+      {{/if}}
+      <div class="form add-admin">
+            <form action="/auth/admin/add" method="post">
+              <h4>Add admin</h4>
+                <div class="input-field">
+                  <label for="username">Username</label><br/>
+                  <input type="text" placeholder="Create a username" class="form-control" id="username" name="username" autofocus />
+                </div> 
+                <div class="input-field">
+                  <label for="email">Email</label><br/>
+                  <input type="text" placeholder="Enter email" class="form-control" id="email" name="email" autofocus />
+                </div>
+                <div class="input-field">
+                  <label for="password">Password</label><br/>
+                  <input type="text" placeholder="Enter password" class="form-control" id="pass" name="password" />
+                </div>
+               <button class="btn btn-signup" type="submit">Add</button>
+            </form>
+        </div>
+        <div class="form add-holiday">
+            <form action="/holidays/upload-holiday" method="post">
+              <h4>Add a holiday</h4>
+                <div class="input-field">
+                  <label for="name">Holiday Name</label><br/>
+                  <input type="text" placeholder="Enter a name" class="form-control" id="name" name="name" autofocus />
+                </div> 
+                <div class="input-field">
+                  <label for="country">Country</label><br/>
+                  <input type="text" placeholder="Enter a country" class="form-control" id="country" name="country" autofocus />
+                </div>
+                <div class="input-field">
+                  <label for="date">Date</label><br/>
+                  <input type="text" placeholder="Enter a date" class="form-control" id="date" name="date" />
+                </div>
+               <button class="btn btn-signup" type="submit">Add</button>
+            </form>
+        </div>
+        <div class="form">            
+            <form id="form-book" 
+                  action="/books/upload-book"
+                  method="post" 
+                  enctype="multipart/form-data" 
+                  >
+                <input name="book" type="file" id="book-input" />
+                <select id="book-type" name="booksPicker">
+                    <option name="tut" value="tutorials">Tutorials</option>
+                    <option name="dia" value="dialects">Dialects</option>
+                    <option name="dic" value="dictionaries">Dictionaries</option>
+                </select>  
+                <br/>
+                <button class="btn" type="submit">Add a book</button>
+            </form>
+        </div>
+        
+    </section>
+    {{> footer}}
+ <script src="/js/sidebar.js"></script>
+ <script src="/js/arab.js"></script>
+</body>
+</html>

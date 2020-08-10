@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A collection of free tutorials and dictionaries to learn Arabic language (classical and dialects) in PDF and DjVu formats. You can read online or download.">
+  <title>Arabic Free Learning</title>
+  <link  rel="stylesheet" href="/css/fontawesome-free-5.9.0-web/css/all.css" />  
+  <link rel="stylesheet" href="/css/arab.css">  
+   
+</head>
+<body>
+  <div class="body-wrapper"></div>
+  {{> header username=username loggedIn=loggedIn}}  
+    <section id="main">       
+        <div class="info-block">
+          {{#if username }}
+            <div id="greeting"><h2>Welcome, {{ username }}!</h2></div>
+          {{/if}}
+          {{> aside }}
+        </div>
+        <div class="container"> 
+          <a class="block dial" href="/books/dialects">
+             <div class="block-title"><h3>Dialects</h3></div>
+          </a>
+          <a class="block tutor" href="/books/tutorials">
+             <div class="block-title"><h3>Tutorials</h3></div>
+          </a>
+          <a class="block dict" href="/books/dictionaries">
+             <div class="block-title"><h3>Dictionaries</h3></div>
+          </a>
+          <a class="block links" href="/links">            
+              <div class="block-title"><h3>Useful Links</h3></div>
+          </a>
+        </div>
+      
+    </section>
+    {{> footer}}
+   
+<script src="js/handlebars-v4.1.2.js"></script>
+<script src="/js/moment.js"></script>
+<script src="/js/sidebar.js"></script>
+<script src="/js/arab.js"></script>
+</body>
+</html>

@@ -62,7 +62,7 @@ const authenticateAdmin = async (req, res, next) => {
                       req.token = token;
                       next(); 
                   } else {
-                      res.redirect('/auth/admin-login');
+                      res.redirect('/');
                   }
           } catch(err) {
               if(err === 'Token is expired') { 
